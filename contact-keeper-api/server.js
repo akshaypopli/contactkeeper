@@ -3,7 +3,14 @@ const users = require('./routes/users');
 const contacts = require('./routes/contacts');
 const auth = require('./routes/auth');
 
+const connectDB = require('./config/db'); 
+
 const app = express();
+
+// connect Database
+connectDB();
+
+app.use(express.json({extended: false}));
 
 app.get('/', (req, res) => res.json({msg: 'welcome to contact keeper api'}));
 
