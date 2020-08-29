@@ -14,13 +14,13 @@ const Contacts = () => {
         // eslint-disable-next-line
     }, []);
 
-    if(contacts !== null && contacts.length===0 && !loading){
+    if(contacts && contacts.length === 0 && !loading){
         return <h4>Please add a Contact</h4>;
     }
     
     return (
         <Fragment>
-            {contacts !== null && !loading ? (<TransitionGroup>
+            {contacts && !loading ? (<TransitionGroup>
                 {filtered !== null
                     ? filtered.map(contact=>(
                         <CSSTransition key={contact._id} timeout={500} classNames='item'>
