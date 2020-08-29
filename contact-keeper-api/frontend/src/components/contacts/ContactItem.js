@@ -23,8 +23,8 @@ const ContactItem = ({contact}) => {
                 {contact.phone && (<li><i className="fas fa-phone-alt"></i>{contact.phone}</li>)}
             </ul>
             <p>
-                <button class="btn btn-dark btn-sm" onClick={()=>{setCurrent(contact)}}>Edit</button>
-                <button class="btn btn-danger btn-sm" onClick={onDelete}>Delete</button>
+                <button className="btn btn-dark btn-sm" onClick={()=>{setCurrent(contact)}}>Edit</button>
+                <button className="btn btn-danger btn-sm" onClick={onDelete}>Delete</button>
             </p>
         </div>
     );
